@@ -1,0 +1,226 @@
+    *{
+        margin: 0 auto;
+    }
+    
+    a, a:link, a:hover, a:visited{
+        text-decoration: none;
+        color:#ffffff
+    }
+    body{
+        background-color: #e2e2e2;
+    }
+
+    img{
+        max-width: 15px;
+        max-height: 15px;
+        border-radius: 50%;
+    }
+
+    th{
+        color:#162e58;
+        font-weight: normal;
+        font-size:  14px;
+        text-align: center;
+    }
+
+    td{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .tudo{
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .linha{
+    clear: both;
+    }
+
+    .h2TituloSessao{
+        font-size: 20px;
+        margin: 10px 10px 10px 10px;
+    }
+
+    .tableJogos{
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    .divMenu{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        clear: both;
+        text-align: center;
+        padding-left: 21%;
+        padding-right: 21%;
+    }
+
+    .itemMenu{
+        float: left;
+        color:#ffffff;
+        text-align: center;
+        width: 12.5%;
+        height: 40px;
+    }
+
+    .itemMenu:hover{
+        background-color:black;
+    }
+
+    table,td,th{
+        border-bottom: solid 1px #e2e2e2;
+        border-collapse: collapse;
+        padding: 7px 7px 7px 7px;
+    }
+    
+    .thNomeDoClube{
+        width: 50%;
+    }
+
+    .thUltimasCinco{
+        width: 20%;
+    }
+    
+    .tdPosicao{
+        width: 3%;
+        font-size: 14px;
+    }
+
+    .divEmp{
+        background-image: url("../img/e.svg");
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 16px;
+        float: right;
+        margin-right: 6px;
+    }
+
+    .divDer{
+        background-image: url("../img/d.svg");
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 16px;
+        float: right;
+        margin-right: 6px;
+    }
+
+    .divVit{
+        background-image: url("../img/v.svg");
+        background-repeat: no-repeat;
+        height: 16px;
+        width: 16px;
+        float: right;
+        margin-right: 6px;
+    }
+
+
+    .tdJogador{
+        text-align: left;
+        width: 90%;
+    }
+
+    .tdNomeClube{
+        text-align: left;
+    }
+
+    #tableJogos .tdTableJogos{
+        padding: 15px 15px 15px 15px;
+    }
+
+    #tableJogos .tableJogos{
+        width: 100%;
+    }
+
+    .tableJogo .thTableJogo{
+        text-align: left;
+    }
+
+    .tableJogo .tdClube{
+        text-align: left;
+        width: 80%;
+    }
+
+    .tableJogo .tdHorario{
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .tableJogos th, #tableJogos td{
+        border-bottom: 0px;
+    }
+
+    .spanNomeClube{
+        color: darkgrey;
+        font-size: 12px;
+    }
+
+    .imgClube{
+        width: 20px;
+        text-align: center;
+        height: 20px;
+    }
+
+    #divCabecalho{
+    background-color: #162e58;
+    min-height: 100px;
+    padding: 20px 50px 10px 50px;
+    position: relative;
+    }
+
+    #h1TituloCabecalho{
+        color: #ffffff;
+        float: left;
+        min-width: 50%;
+        font-size: 20px;
+        text-align: left;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+
+    #divClassificacao{
+        background-color: #fff;
+        width: 100%;
+    }
+
+    #h3TituloGrupo{
+        font-size: 14px;
+        padding: 5px 5px 5px 5px;
+    }
+
+    #divGoleadores{
+        width: 50%;
+    }
+
+    #tableGoleadores{
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    #tableClassificacao{
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    #tableGoleadotes td{
+        padding: 20px 10px 10px 10px;
+    }
+    #h2TituloSessao{
+        font-size: 14px;
+    }
+
+    #divJogos{
+        width: 50%;
+        padding-bottom: 50px;
+        background-color: #ffffff;
+    }
+
+    #divfoto{
+        width: 20%;
+        float: left;
+        text-align: center;
+    }
+
+    #tableJogos{
+        width: 100%;
+        background-color: #ffffff;
+    }
