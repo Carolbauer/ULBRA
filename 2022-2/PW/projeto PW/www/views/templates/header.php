@@ -29,6 +29,7 @@
 <div class="row">
     <nav class="navbar bg-ligth col-md-3">
     <ul class="navbar-nav">
+        <h2>Menu</h2>
         <li class="nav-item">
             <a id="home" class="nav-link" href="?controller=site&action=home">Home</a>
         </li>
@@ -41,8 +42,16 @@
         <li class="nav-item">
             <a id="contact" class="nav-link" href="?controller=site&action=contact">Contatos</a>
         </li>
+        <h4>Clientes</h4>
+        <li class="nav-item">
+            <a id="register" class="nav-link" href="?controller=client&action=register">Cadastro</a>
+        </li>
+        <li class="nav-item">
+            <a id="" class="nav-link" href="?controller=client&action=listClients">Listar Clientes</a>
+        </li>
     </ul>
     </nav>
+
 
     <section class="col-md-9">
       

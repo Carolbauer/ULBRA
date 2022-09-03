@@ -30,10 +30,30 @@
                   break;
                 }
               }
+                  case 'client':
+                    require_once('controllers/ClientController.php');
+                    $client = new ClientController();
+                    if(!isset($_GET['action'])){
+                      $client -> index();
+                }else{
+                  switch($_REQUEST['action']){
+                    case'register':
+                      $client -> register();
+                    break;
+                    case 'registerView':
+                      $client -> registerView();
+                    break;
+                    case 'listClients':
+                      $client -> listClients();
+                      break;
+
+                }
+              }
             break;
           }
         }
+
+            
             
 
     
-
