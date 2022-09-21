@@ -6,7 +6,7 @@ class MainController{
 
         if(isset($_SESSION['user'])){
         require_once("views/templates/header.php");
-        require_once("views/site/home.php");
+        require_once("views/templates/home.php");
         require_once("views/templates/footer.php");
         }else{
             header('Location:?controller=main&action=login');

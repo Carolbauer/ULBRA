@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   
   <!-- Css -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css"/>
   
   <!--jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -23,10 +23,10 @@
   <title>Projeto PW</title>
 </head>
 <body>
-<header class="p-3 text-center">
-  <h1>Área administrativa
+<header class="p-3 text-center bg-dark">
+  <h1>Área administrativa</h1>
     <a href ="?controller=main&action=logout">Sair</a>
-  </h1>
+  
 </header>
 
 <div class="container-fluid">
@@ -36,6 +36,13 @@
         <h2>Menu</h2>
         <li class="nav-item">
             <a class ="nav-link" href="?controller=main&action=index">Home</a>
+        </li>
+        <h4>Clientes</h4>
+        <li class="nav-item">
+            <a id="register" class="nav-link" href="?controller=client&action=register">Cadastro</a>
+        </li>
+        <li class="nav-item">
+            <a id="" class="nav-link" href="?controller=client&action=listClients">Listar Clientes</a>
         </li>
     </ul>
     </nav>
