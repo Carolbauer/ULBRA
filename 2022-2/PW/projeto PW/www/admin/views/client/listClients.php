@@ -7,6 +7,7 @@
         <th>Email</th>
         <th>Telefone</th>
         <th>Endereço</th>
+        <th>Açōes</th>
     </tr>   
 
     <?php
@@ -27,6 +28,10 @@
             </td>
             <td>
                 <?=$client['address']?>
+            </td>
+            <td>
+                <a href="?controller=client&action=detailsClient&id=<?=$client['idClient']?>">Detalhes</a>
+
             </td>
 
         </tr>

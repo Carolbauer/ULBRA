@@ -39,9 +39,6 @@
         </li>
         <h4>Clientes</h4>
         <li class="nav-item">
-            <a id="register" class="nav-link" href="?controller=client&action=register">Cadastro</a>
-        </li>
-        <li class="nav-item">
             <a id="" class="nav-link" href="?controller=client&action=listClients">Listar Clientes</a>
         </li>
     </ul>

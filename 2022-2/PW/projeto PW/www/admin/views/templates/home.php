@@ -3,6 +3,6 @@
     Página Home
   </h1>
   <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ab, a et totam vero eius! Minima assumenda corporis repudiandae laborum iste distinctio porro voluptates, rerum laudantium quae ut, dolorem eligendi.
+   Bem Vindo a Área Administrativa.
   </p>
 </main>

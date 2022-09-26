@@ -14,11 +14,17 @@ if (!isset($_GET['controller'])) {
           $MainController -> index();
         }else{
           switch($_REQUEST['action']){
+            case'index':
+              $MainController -> index();
+            break;
             case'login':
               $MainController -> login();
             break;
             case'logout':
               $MainController -> logout();
+            break;
+            case'home':
+              $MainController -> home();
             break;
           }
         }
@@ -38,17 +44,14 @@ if (!isset($_GET['controller'])) {
                   require_once('controllers/ClientController.php');
                   $client = new ClientController();
                   if(!isset($_GET['action'])){
-                    $client -> index();
+                
               }else{
                 switch($_REQUEST['action']){
-                  case'register':
-                    $client -> register();
-                  break;
-                  case 'registerView':
-                    $client -> registerView();
-                  break;
                   case 'listClients':
                     $client -> listClients();
+                    break;
+                  case 'detailsClient':
+                    $client -> detailsClient($_GET['id']);
                     break;
 
               }

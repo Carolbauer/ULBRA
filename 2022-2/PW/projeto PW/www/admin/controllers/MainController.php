@@ -21,8 +21,11 @@ class MainController{
 
     public function logout(){
         session_destroy();
-        header('Location:?controller=main&action=login.php');
+        header('Location:?controller=main&action=login');
+    }
+    public function home(){
+        require_once("views/templates/header.php");
+        require_once("views/templates/home.php");
+        require_once("views/templates/footer.php");
     }
 }
-
-?>
