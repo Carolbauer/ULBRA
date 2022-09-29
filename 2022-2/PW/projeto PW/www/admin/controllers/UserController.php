@@ -11,8 +11,8 @@ class UserController
     $result = $UserModel->consultUser($userName);
 
     if ($client = $result->fetch_assoc()) {
-      if ($password == $line['password']) {
-        $_SESSION['user'] = $line;
+      if ($password == $client['password']) {
+        $_SESSION['user'] = $client;
         header('Location: index.php');
       } else {
         echo 'Senha inválida';
