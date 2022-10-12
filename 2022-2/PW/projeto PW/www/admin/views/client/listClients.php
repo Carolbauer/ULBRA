@@ -7,7 +7,7 @@
         <th>Email</th>
         <th>Telefone</th>
         <th>Endereço</th>
-        <th>Açōes</th>
+        <th colspan = "2">Açōes</th>
     </tr>   
 
     <?php
@@ -30,8 +30,15 @@
                 <?=$client['address']?>
             </td>
             <td>
-                <a href="?controller=client&action=detailsClient&id=<?=$client['idClient']?>">Detalhes</a>
+                <a href="?controller=client&action=detailsClient&id=<?=$client['idClient']?>"class="btn btn-info">Detalhes</a>
 
+            </td>
+            <td>
+                <a href="?controller=client&action=updateClient&id=<?=$client['idClient']?>"class="btn btn-warning">Alterar</a>
+
+            </td>
+            <td>
+                <a href="?controller=client&action=deleteClient&id=<?= $client['idClient']?>" class="btn btn-danger">Deletar</a>
             </td>
 
         </tr>

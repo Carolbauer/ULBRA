@@ -1,5 +1,5 @@
 <h1>Detalhes do Cliente</h1>
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>Código do Cliente</th>
         <td>
@@ -11,15 +11,15 @@
         </td>
         <th>Email</th>
         <td>
-            <?=$arrayClients['name']?>
+            <?=$arrayClients['email']?>
         </td>
         <th>Endereço</th>
         <td>
-            <?=$arrayClients['name']?>
+            <?=$arrayClients['address']?>
         </td>
         <th>Telefone</th>
         <td>
-            <?=$arrayClients['name']?>
+            <?=$arrayClients['phone']?>
         </td>
 
     </tr>
