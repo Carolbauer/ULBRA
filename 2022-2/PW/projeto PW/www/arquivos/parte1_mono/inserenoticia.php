@@ -28,23 +28,7 @@ if(isset($_FILES["foto"])){
 
     // Se a imagem foi carregada com sucesso, testa o tamanho da mesma
     if ($img) { 
-        // Pega o tamanho da imagem e calcula proporção de resize 
-        $width  = imagesx($img); 
-        $height = imagesy($img); 
-        $scale  = min($max_width/$width, $max_height/$height); 
-        // Se a imagem é maior que o permitido, encolhe ela! 
-        if ($scale < 1) { 
-            $new_width = floor($scale*$width); 
-            $new_height = floor($scale*$height);
-            // Cria uma imagem temporária 
-            $tmp_img = imagecreatetruecolor($new_width, $new_height);
-            // Copia e resize a imagem velha na nova     
-            imagecopyresampled($tmp_img, $img, 0, 0, 0, 0, 
-                            $new_width, $new_height, $width, $height);  
-            imagedestroy($img); 
-            $img = $tmp_img; 
-        }           
-    }
+      
 
 	//cria imagem no diretório @imagejpeg($img,"diretorio/".$id_noticia) se já tiver com este nome vai substituir
 	$localFile = "img/{$id_noticia}.jpg";

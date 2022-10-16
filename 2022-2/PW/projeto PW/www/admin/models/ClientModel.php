@@ -37,7 +37,9 @@ class ClientModel{
         )
         ";
 
-        return $this -> connection -> query($sql);
+        $this -> connection -> query($sql);
+
+        return $this -> connection ->insert_id;
     }
     public function updateClient($arrayClients){
         $sql = "

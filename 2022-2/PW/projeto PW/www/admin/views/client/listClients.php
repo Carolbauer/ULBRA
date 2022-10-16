@@ -7,6 +7,7 @@
         <th>Email</th>
         <th>Telefone</th>
         <th>Endereço</th>
+        <th>Foto</th>
         <th colspan = "2">Açōes</th>
     </tr>   
 
@@ -28,6 +29,15 @@
             </td>
             <td>
                 <?=$client['address']?>
+            </td>
+            <td>
+                <?php
+                if (is_file("assets/img/client/{$client['idClient']}.jpg")){
+                    echo "<img class='img-fluid' src='assets/img/client/{$client['idClient']}.jpg'";
+                }else{
+                    echo'sem imagem';
+                }
+                ?>
             </td>
             <td>
                 <a href="?controller=client&action=detailsClient&id=<?=$client['idClient']?>"class="btn btn-info">Detalhes</a>
