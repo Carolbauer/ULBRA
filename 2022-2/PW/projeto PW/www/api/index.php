@@ -30,7 +30,17 @@ if(isset($uriSegments[1])){
 					$client -> deleteClient($uriSegments[2]);
 				break;
 			}
+		
 		break;	
+		case 'user':
+			require_once('controllers/UserController.php');
+			$user = new UserController();
+			switch($request_method){
+				case 'GET':
+					$user -> validateLogin();
+					break;
+			}
+		break;
 	}
 }
 ?>
