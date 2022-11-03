@@ -41,6 +41,29 @@ if(isset($uriSegments[1])){
 					break;
 			}
 		break;
+
+		case 'contact':
+			require_once("controllers/UserController.php");
+			$user = new UserController();
+			require_once ('controllers/ContactController.php');
+			$contact = new ContactController();
+			switch ($request_method){
+				case 'GET':
+					if($user->isAdmin()){
+						if(!isset($uriSegments[2]))
+						$contact ->listContacts();
+						else
+							$contact->consultContact($uriSegments[2]);
+					}else{
+						echo 'Acesso não permitido';
+					}
+					break;
+				case 'POST':
+					$contact -> insertcontact();
+					break;
+
+			}
+			break;
 	}
 }
 ?>
