@@ -21,8 +21,8 @@
 
   </head>
   <body>
-    <header class="p-5 bg-primary text-white text-center">
-      <h1>Minha página inicial</h1>
+  <header class="p-3 text-center text-white" style="background:#68C7ED">
+      <h1>Projeto PW</h1>
     </header>
 
     <div class="container-fluid">

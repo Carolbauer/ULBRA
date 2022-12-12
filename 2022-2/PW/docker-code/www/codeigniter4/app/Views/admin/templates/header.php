@@ -20,9 +20,9 @@
 </head>
 
 <body>
-	<header class="p-3 text-center">
+	<header class="p-3 text-center text-white" style="background:#68C7ED">
 		<h1>Área Administrativa</h1>
-		<a href="?controller=main&action=logout">Sair</a>
+		<a href="<?=base_url('admin/logout')?>">Sair</a>
 	</header>
 
 	<div class="container-fluid">
@@ -31,17 +31,20 @@
 				<h2>Menu</h2>
 				<ul class="nav flex-column">
 					<li class="nav-item">
-						<a class="nav-link" href="?controller=main&action=index">Home</a>
+						<a class="nav-link" href="<?= base_url('/admin')?>">Home</a>
 					</li>
 				</ul>
 				<h3>Clientes</h3>
 				<ul class="nav flex-column">
 					<li class="nav-item">
-						<a class="nav-link" href="?controller=client&action=listClients">Listar Clientes</a>
+						<a class="nav-link" href="<?= base_url('/admin/listClients')?>">Listar Clientes</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="?controller=client&action=insertClient">Cadastrar Cliente</a>
+						<a class="nav-link" href="<?= base_url('/admin/insertClient')?>">Cadastrar Cliente</a>
 					</li>
+					<li class="nav-item">
+                    <a class="nav-link" href="<?=base_url('admin/client/procuraClient')?>">Buscar</a>
+                </li>
 				</ul>
 			</nav>
 			<section class="p-3 col-md-9">

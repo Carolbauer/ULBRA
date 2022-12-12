@@ -1,0 +1,106 @@
+CRITICAL - 2022-12-04 16:12:59 --> Unmatched '}'
+in APPPATH/Controllers/Client.php on line 37.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/Client.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Client')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Client')
+ 4 SYSTEMPATH/CodeIgniter.php(877): class_exists('\\App\\Controllers\\Client', true)
+ 5 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 17:28:51 --> Undefined variable $clientModel
+in APPPATH/Controllers/Admin/Client.php on line 81.
+ 1 APPPATH/Controllers/Admin/Client.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientModel', 'APPPATH/Controllers/Admin/Client.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->procuraClient()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 17:29:56 --> Undefined variable $clientModel
+in APPPATH/Controllers/Admin/Client.php on line 81.
+ 1 APPPATH/Controllers/Admin/Client.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientModel', 'APPPATH/Controllers/Admin/Client.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->procuraClient()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 17:30:23 --> Undefined variable $clientModel
+in APPPATH/Controllers/Admin/Client.php on line 81.
+ 1 APPPATH/Controllers/Admin/Client.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientModel', 'APPPATH/Controllers/Admin/Client.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->procuraClient()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 17:31:11 --> Undefined variable $clientModel
+in APPPATH/Controllers/Admin/Client.php on line 81.
+ 1 APPPATH/Controllers/Admin/Client.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientModel', 'APPPATH/Controllers/Admin/Client.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->procuraClient()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 17:31:41 --> Undefined variable $clientModel
+in APPPATH/Controllers/Admin/Client.php on line 81.
+ 1 APPPATH/Controllers/Admin/Client.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientModel', 'APPPATH/Controllers/Admin/Client.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->procuraClient()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 17:31:57 --> Undefined array key "busca"
+in APPPATH/Controllers/Admin/Client.php on line 81.
+ 1 APPPATH/Controllers/Admin/Client.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "busca"', 'APPPATH/Controllers/Admin/Client.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->procuraClient()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 17:32:13 --> Undefined array key "busca"
+in APPPATH/Controllers/Admin/Client.php on line 81.
+ 1 APPPATH/Controllers/Admin/Client.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "busca"', 'APPPATH/Controllers/Admin/Client.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->procuraClient()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 17:32:25 --> Undefined array key "procura"
+in APPPATH/Controllers/Admin/Client.php on line 81.
+ 1 APPPATH/Controllers/Admin/Client.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "procura"', 'APPPATH/Controllers/Admin/Client.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->procuraClient()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 17:34:57 --> Undefined array key "procura"
+in APPPATH/Controllers/Admin/Client.php on line 81.
+ 1 APPPATH/Controllers/Admin/Client.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "procura"', 'APPPATH/Controllers/Admin/Client.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->procuraClient()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 17:35:27 --> Undefined array key "search"
+in APPPATH/Controllers/Admin/Client.php on line 81.
+ 1 APPPATH/Controllers/Admin/Client.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "search"', 'APPPATH/Controllers/Admin/Client.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->procuraClient()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 17:35:55 --> Undefined array key "search"
+in APPPATH/Controllers/Admin/Client.php on line 81.
+ 1 APPPATH/Controllers/Admin/Client.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "search"', 'APPPATH/Controllers/Admin/Client.php', 81)
+ 2 SYSTEMPATH/CodeIgniter.php(927): App\Controllers\Admin\Client->procuraClient()
+ 3 SYSTEMPATH/CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Client))
+ 4 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 18:09:32 --> Class "CodeIgniter\BaseController" not found
+in APPPATH/Controllers/Client.php on line 8.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(282): include_once()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/Client.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Client')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Client')
+ 5 SYSTEMPATH/CodeIgniter.php(877): class_exists('\\App\\Controllers\\Client', true)
+ 6 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-04 18:10:27 --> Class "App\Controller\BaseController" not found
+in APPPATH/Controllers/Client.php on line 8.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(282): include_once()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/Client.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Client')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Client')
+ 5 SYSTEMPATH/CodeIgniter.php(877): class_exists('\\App\\Controllers\\Client', true)
+ 6 SYSTEMPATH/CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

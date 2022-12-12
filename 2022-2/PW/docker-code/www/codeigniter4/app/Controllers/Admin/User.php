@@ -18,12 +18,13 @@ class User extends BaseController{
             if($user['password'] == $userPassword){
                 $session = \Config\Services::session();
                 $session -> set('user', $user);
+                //senha correta e usuario correto
                 return redirect()->to(base_url('/admin'));
             }else{
-                //senha inválida
+                echo "senha inválida";
             }
        }else{
-            //usuário não existe
+            echo "usuário não existe";
        }  
     }
 }

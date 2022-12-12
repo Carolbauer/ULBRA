@@ -3,22 +3,23 @@
 namespace App\Controllers;
 
 use App\Models\ClientModel;
+use App\Controllers\BaseController;
 
+class Client extends BaseController
+{
 
-class Client extends BaseController{
+  public function listClients()
+  {
 
-    public function listClients(){
+    $ClientModel = new ClientModel();
 
-        $ClientModel = new ClientModel();
-    
-        $data = [
-            'arrayClients' => $ClientModel -> findAll()
-        ];
+    $data = [
+      'arrayClients' => $ClientModel->findAll()
+    ];
 
-        echo view ('templates/header');
-        echo view ('client/listClients', $data);
-        echo view ('templates/footer');
-        
-    }
+    echo view('templates/header');
+    echo view('client/listClients', $data);
+    echo view('templates/footer');
+  }
 
 }
