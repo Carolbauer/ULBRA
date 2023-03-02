@@ -63,9 +63,13 @@ create table vendas
 	on update cascade
 );
 
-insert into produtos(descricao, preco, nome_categoria, descricao_categoria) VALUES (' Macbook Air 2020', 1200.00, 'Eletrônicos', 'tecnologia'),
+insert into produtos(descricao, preco, nome_categoria, descricao_categoria) 
+VALUES (' Macbook Air 2020', 1200.00, 'Eletrônicos', 'tecnologia'),
 ('Microondas', 350.00, 'Eletrodomésticos', 'cozinha'), ('Alexa', 700.00, 'Eletrônicos','tecnologia');
 
 Select max(preco)
 from produtos;
+
+insert into cidades(nome, uf) 
+values('Capão da canoa', 'RS'), ('Criciúma', 'SC'), ('Caxias do Sul', 'RS');
 
