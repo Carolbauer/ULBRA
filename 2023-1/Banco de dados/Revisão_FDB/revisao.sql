@@ -12,7 +12,7 @@ create TABLE cidades (
   
   CONSTRAINT codcid_cidade_fk
   FOREIGN KEY (codcid)
-  REFERENCES Cidade(codcid)
+  REFERENCES cidades(codcid)
 
   on delete restrict
   on update cascade
@@ -49,7 +49,8 @@ create table produtos
 
 create table vendas
 (
-	cod_prod int not null,
+	id
+    cod_prod int not null,
     codfilial  int not null,
     constraint produtos_vendas_fk
 	foreign key(cod_prod) 
@@ -63,11 +64,20 @@ create table vendas
 	on update cascade
 );
 
+create table vendas_produtos(
+    id int 
+    quantidade
+    cod_prod
+    id_venda
+
+
+)
+
 insert into produtos(descricao, preco, nome_categoria, descricao_categoria) 
 VALUES (' Macbook Air 2020', 1200.00, 'Eletrônicos', 'tecnologia'),
 ('Microondas', 350.00, 'Eletrodomésticos', 'cozinha'), ('Alexa', 700.00, 'Eletrônicos','tecnologia');
 
-Select max(preco)
+Select nome as produto, max(preco) as mais_alto
 from produtos;
 
 insert into cidades(nome, uf) 
