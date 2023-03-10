@@ -83,3 +83,5 @@ from produtos;
 insert into cidades(nome, uf) 
 values('Capão da canoa', 'RS'), ('Criciúma', 'SC'), ('Caxias do Sul', 'RS');
 
+
+
