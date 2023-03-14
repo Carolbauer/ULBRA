@@ -5,7 +5,7 @@ public class ex2_3 {
         int soma = 0;
         int i = 0;
 
-        while (soma < 100){
+        while (soma + i < 100){
             System.out.println(i);
                     soma +=i;
             i++;
