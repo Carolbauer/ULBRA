@@ -2,11 +2,11 @@
  e o número total de pedidos feitos por cada cliente, apenas para aqueles que fizeram 
  pelo menos três pedidos. Use um inner join entre as tabelas "clientes" e "pedidos" 
  e agrupe os resultados pelo nome do cliente*/
-SELECT c.nome, SUM(pedidos.total) as total_compras, COUNT(pedidos.id) as total_pedidos
+SELECT c.nome, SUM(p.total) as total_compras, COUNT(p.id) as total_pedidos
 FROM clientes c
-INNER JOIN pedidos ON c.id = pedidos.id_cliente
+INNER JOIN pedidos p ON c.id = p.id_cliente
 GROUP BY c.nome
-HAVING COUNT(pedidos.id) >= 3;
+HAVING COUNT(p.id) >= 3;
 
 /*Escreva uma consulta que retorne o nome do produto, a média do preço de venda e a 
 soma total de unidades vendidas por categoria de produto. Use um left join entre as 
@@ -25,12 +25,13 @@ total de unidades compradas por fornecedor e por produto, apenas para aqueles co
  "produtos" e "compras" e agrupe os resultados pelo nome do fornecedor e pelo nome 
  do produto.
 */
-SELECT f.nome AS nome_fornecedor, p.nome AS nome_produto,  SUM (c.unidades) AS unidades_compradas
+SELECT f.nome AS nome_fornecedor, p.nome AS nome_produto,  SUM (cp.unidades) AS unidades_compradas
 FROM fornecedores f
 	INNER JOIN compras c  ON f.id = c.id_fornecedores
-	INNER JOIN produtos p ON f.id = p.id
+	INNER JOIN compras_produtos cp ON cp.id_compra = p.id
+	INNER JOIN produtos p ON p.id = cp.id
 GROUP BY f.nome, p.nome
-HAVING SUM  (c.unidades) > 100;
+HAVING SUM  (cp.unidades) > 100;
 
 /*Escreva uma consulta que retorne o nome do departamento, o nome do funcionário e a 
 média do salário dos funcionários em cada departamento, apenas para aqueles com uma 
