@@ -1,5 +1,7 @@
 import java.util.Scanner;
-
+/*Escreva um programa em Java que solicita um número
+inteiro positivo e imprime a tabuada desse número até o
+número 10. Utilize um loop for para realizar a impressão.*/
 public class ex3 {
     public static void main(String[] args) {
         int numero = 0;
