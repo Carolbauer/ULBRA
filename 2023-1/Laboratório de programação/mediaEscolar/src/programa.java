@@ -1,8 +1,8 @@
 public class programa {
     public static void main(String[] args) {
         //prova dos alunos
-        prova prova1_aluno1 = new prova(4, 6);
-        prova prova2_aluno1 = new prova(3, 8);
+        prova prova1_aluno1 = new prova(4.0, 2.5);
+        prova prova2_aluno1 = new prova(1.0, 7.0);
 
         prova prova1_aluno2 = new prova(10, 5);
         prova prova2_aluno2 = new prova(9, 8);
