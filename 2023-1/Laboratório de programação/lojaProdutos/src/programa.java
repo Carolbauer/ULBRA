@@ -21,6 +21,8 @@ public class programa {
         loja.venderProduto(produto2, 10);
         loja.venderProduto(produto3, 1);
 
+        loja.removerProduto(produto1);
+
         //produtos disponíveis após venda
         loja.listarProduto(produto1);
         loja.listarProduto(produto2);
