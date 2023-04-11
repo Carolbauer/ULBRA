@@ -29,17 +29,17 @@ public class Loja {
     }
 
     public void listarProduto(Produto produto) {
-        if (this.produto1 != null) {
-            System.out.println(this.produto1.getNome() + " - R$ " + this.produto1.getPreco() + " - "
-                    + this.produto1.getQuantidade() + "em estoque");
+        if (this.produto1 == produto) {
+            System.out.println(this.produto1.getNome() + " - R$ " + " " + this.produto1.getPreco() + " - "
+                    + this.produto1.getQuantidade() + " " + "em estoque");
         }
-        if (produto2 != null) {
-            System.out.println(produto2.getNome() + "- R$" + produto2.getPreco() + "-"
-                    + produto2.getQuantidade() + "em estoque");
+        if (this.produto2 == produto) {
+            System.out.println(this.produto2.getNome() + "- R$" + " " + this.produto2.getPreco() + "-"
+                    + this.produto2.getQuantidade() + " " + "em estoque");
         }
-        if (produto3 != null) {
-            System.out.println(produto3.getNome() + " - R$" + produto3.getPreco() + "-"
-                    + produto3.getQuantidade() + "em estoque");
+        if (this.produto3 == produto) {
+            System.out.println(this.produto3.getNome() + " - R$" + " " + this.produto3.getPreco() + "-"
+                    + this.produto3.getQuantidade() + " " + "em estoque");
         }
 
     }
