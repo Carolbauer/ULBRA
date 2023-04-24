@@ -3,6 +3,7 @@ public class Estudante {
     private int idade;
     private int pontos;
 
+    //instanciando  classe que foi definida, função de iniciar uma classe
     public Estudante(String nome, int idade, int pontos){
         this.nome = nome;
         this.idade = idade;
