@@ -1,18 +1,18 @@
 public class Cachorro {
     private String nome;
     private String raca;
-    private double preco;
+    private int idade;
 
-    public Cachorro(String nome, String raca, double preco){
+    public Cachorro(String nome, String raca, int idade){
         this.nome  = nome;
         this.raca = raca;
-        this.preco =  preco;
+        this.idade =  idade;
     }
 
     public  Cachorro(String nome,  String raca){
         this.nome  = nome;
         this.raca = raca;
-        this.preco = 15.00;
+        this.idade = 5;
     }
 
     public String getNome() {
@@ -31,11 +31,11 @@ public class Cachorro {
         this.raca = raca;
     }
 
-    public double getPreco() {
-        return preco;
+    public double getIdade() {
+        return idade;
     }
 
     public void setPreco(double preco) {
-        this.preco = preco;
+        this.idade = idade;
     }
 }
