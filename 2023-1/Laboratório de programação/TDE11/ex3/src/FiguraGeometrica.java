@@ -1,11 +1,8 @@
-public class FiguraGeometrica {
-    double lado;
-    public double calcularArea(){
-        return calcularArea();
-    }
+public  abstract class FiguraGeometrica {
+     double lado;
+    public abstract double calcularArea();
 
-    public double calcularPerimetro(){
-        return calcularPerimetro();
 
-    }
+
+    public abstract double calcularPerimetro();
 }
