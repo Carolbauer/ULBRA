@@ -51,7 +51,7 @@ public class Livro extends Produto{
                 "Titulo:" +getTitulo() + "\n"+
                 "Autor:" +getAutor() + "\n" +
                 "Ano de publicação:" + getAnoPublicacao() + "\n"+
-        "Disponibilidade:" + " " + (isDisponibilidade() ? "Sim" : "Não" + "\n");
+        "Disponibilidade:"+" " + (isDisponibilidade() ? "Sim" : "Não" + "\n");
 
     }
 }

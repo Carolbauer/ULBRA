@@ -7,7 +7,6 @@ public class Main {
         Livro livro3 = new Livro("Lógica de programação","Ramon", 2020,true);
         Livro livro4 = new Livro("Banco de Dados", "Cássio", 2022, true);
         Livro livro5 = new Livro("Plataformas computacionais", "Vini", 2021, false);
-        Livro livro6 = new Livro("c#", "Pedro", 2019,false);
 
         //imprimir detalhes livros
         System.out.println(livro1.detalhesDoProduto());
@@ -25,7 +24,6 @@ public class Main {
         biblioteca.adicionarLivro(livro3);
         biblioteca.adicionarLivro(livro4);
         biblioteca.adicionarLivro(livro5);
-        biblioteca.adicionarLivro(livro6);
 
         //verificar disponibilidade de um livro
         System.out.println("Disponibilidade Livro 1:" +" "+ biblioteca.verificarDisponibilidadedeLivro(livro1));
