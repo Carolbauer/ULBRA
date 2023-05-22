@@ -62,7 +62,7 @@ public void adicionarLivro(Livro livro){
         livro5.setTitulo(novoTitulo);
         livro5.setAnoPublicacao(novoAnoPublicacao);
     }else {
-        System.out.println("Não existe este livro! Então não é impossiível atualizar os dados");
+        System.out.println("Não existe este livro! Então não é impossível atualizar os dados");
     }
     }
 

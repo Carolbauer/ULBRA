@@ -3,7 +3,7 @@ public class Livro extends Produto{
     String autor;
     int anoPublicacao;
     boolean disponibilidade;
-    boolean excluido;
+
 
     //construtor
     public Livro(String titulo, String autor,int anoPublicacao,boolean disponibilidade) {
