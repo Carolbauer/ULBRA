@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Biblioteca biblioteca = new Biblioteca();
+        Biblioteca biblioteca = new Biblioteca(5);
 
         Livro livro1 = new Livro("Java","fogaça", 2022,true);
         Livro livro2 = new Livro("Phyton", "Paulo", 2021, false);
@@ -39,6 +39,8 @@ public class Main {
 
         //remover livro
         biblioteca.removerLivro(livro2);
+
+        biblioteca.verificarDisponibilidadedeLivro(livro1);
         
 
 
