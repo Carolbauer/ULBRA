@@ -47,7 +47,7 @@ db.students.updateOne({ "firstName": "João", "lastName": "Silva" }, { $set: { "
 db.students.findOne({ "firstName": "João", "lastName": "Silva" }) */
 
 /*Exclua um dos documentos da coleção "Students". Novamente, confirme se a operação foi bem sucedida através de uma nova consulta.
-db.students.deleteOne({ "firstName": "João", "lastName": "Silva" }, { $set: { "age": 13 } })
+db.students.deleteOne({ "firstName": "João", "lastName": "Silva" })
 db.students.findOne({ "firstName": "João", "lastName": "Silva" }) */
 
 
