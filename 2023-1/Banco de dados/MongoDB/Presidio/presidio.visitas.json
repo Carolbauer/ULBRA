@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "648b414d0ac86ca38010aa10"
+  },
+  "VisitaID": "1",
+  "DetentoID": 1,
+  "VisitanteID": 1,
+  "Data": "10/06/2023",
+  "HoraEntrada": 12,
+  "HoraSaida": 13
+}]
