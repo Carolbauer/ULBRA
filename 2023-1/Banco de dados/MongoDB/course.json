@@ -1,0 +1,22 @@
+/*Crie uma nova coleção chamada "Courses". Cada documento dessa coleção deve ter os campos "courseName" e "teacherName". Além disso, crie um array "students" para representar os estudantes matriculados no curso. Cada item desse array deve ser um objeto com os campos "firstName" e "lastName". Adicione pelo menos um documento a esta coleção e inclua alguns estudantes no array.*/
+[{
+    "_id": {
+      "$oid": "648a5f79f5ea3f9109f7492e"
+    },
+    "coursename": "Banco de dados",
+    "teachername": "Cássio",
+    "Students": [
+      {
+        "firstName": "Carlos",
+        "lastName": "Barbosa"
+      },
+      {
+        "firstName": "Maria",
+        "lastName": "Silva"
+      },
+      {
+        "firstName": "Pedro",
+        "lastName": "Almeida"
+      }
+    ]
+  }]

@@ -1,0 +1,53 @@
+/*
+Crie um novo banco de dados chamado "SchoolDB" e, dentro dele, uma coleção chamada "Students". Inclua os seguintes campos nos documentos desta coleção: "firstName", "lastName", "age" e "grade". Insira pelo menos três documentos com dados fictí.cios
+*/
+
+[{
+  "_id": {
+    "$oid": "648a51bf6d5d018b19cfbb8c"
+  },
+  "firstName": "João",
+  "lastName": "Silva",
+  "age": 13,
+  "grade": 9
+},
+{
+  "_id": {
+    "$oid": "648a51bf6d5d018b19cfbb8d"
+  },
+  "firstName": "Maria",
+  "lastName": "Santos",
+  "age": 17,
+  "grade": 10
+},
+{
+  "_id": {
+    "$oid": "648a51bf6d5d018b19cfbb8e"
+  },
+  "firstName": "Pedro",
+  "lastName": "Almeida",
+  "age": 16,
+  "grade": 8
+},
+{
+  "_id": {
+    "$oid": "648a5905fbb7c7bf208b9ec5"
+  },
+  "firstName": "Carlos",
+  "lastName": "Barbosa",
+  "age": 14,
+  "grade": 9
+}
+]
+/*Crie uma consulta para exibir todos os estudantes que têm mais de 15 anos na coleção "Students".
+{db.students.find({"age":{$gt: 15}})}*/
+
+/*Atualize a idade de um dos estudantes que você criou no exercício 1. Confirme se a alteração foi feita com sucesso realizando uma nova consulta.
+db.students.updateOne({ "firstName": "João", "lastName": "Silva" }, { $set: { "age": 13 } })
+db.students.findOne({ "firstName": "João", "lastName": "Silva" }) */
+
+/*Exclua um dos documentos da coleção "Students". Novamente, confirme se a operação foi bem sucedida através de uma nova consulta.
+db.students.deleteOne({ "firstName": "João", "lastName": "Silva" }, { $set: { "age": 13 } })
+db.students.findOne({ "firstName": "João", "lastName": "Silva" }) */
+
+
