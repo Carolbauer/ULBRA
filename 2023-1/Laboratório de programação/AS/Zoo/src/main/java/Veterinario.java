@@ -18,7 +18,7 @@ public class Veterinario extends Funcionario{
 
     //metodo
     public void realizarExame(Animal animal){
-        System.out.println("O veterinário" + getNome() + " está realizando exame no animal" + animal.getNome());
+        System.out.println("O veterinário está realizando exame no " + animal.getNome());
     }
 
 

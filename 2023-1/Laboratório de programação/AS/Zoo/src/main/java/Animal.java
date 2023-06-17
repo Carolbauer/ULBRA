@@ -45,4 +45,13 @@ public class Animal {
     public void setEspecie(String especie) {
         this.especie = especie;
     }
+
+    //sobrecarga de método
+    public void movimentar(String tipoMovimento) {
+        System.out.println("O animal se moveu de maneira " + tipoMovimento);
+    }
+
+    public void movimentar() {
+        System.out.println("O animal se moveu de maneira padrão");
+    }
 }
