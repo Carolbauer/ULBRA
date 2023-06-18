@@ -48,9 +48,10 @@ public class Animal {
 
     //sobrecarga de método
     public void movimentar(String tipoMovimento) {
-        System.out.println("O animal se moveu de maneira " + tipoMovimento);
+        System.out.println("O animal"+tipoMovimento);
     }
 
+    //sobrecarga
     public void movimentar() {
         System.out.println("O animal se moveu de maneira padrão");
     }
