@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "649a1a44173d0bdb398a87db"
+  },
+  "id_pedido": "12A",
+  "CPF": "761.387.616-00",
+  "data": "2023-06-23",
+  "Hora": "21:00",
+  "tipo_pedido": "local",
+  "mesa": 4,
+  "Endereco": null,
+  "total_pedido": "100.99"
+},
+{
+  "_id": {
+    "$oid": "649a1a4c173d0bdb398a87dc"
+  },
+  "id_pedido": "13A",
+  "CPF": "831.762.376-93",
+  "data": "2023-06-23",
+  "Hora": "21:30",
+  "tipo_pedido": "entrega",
+  "mesa": null,
+  "Endereco": "Castelo Branco, 56",
+  "total_pedido": "130.99"
+}]

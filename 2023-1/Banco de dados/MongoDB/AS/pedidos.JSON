@@ -1,0 +1,233 @@
+db.cliente.insertOne({
+  "Nome": "Laura de Matos",
+  "CPF": "761.387.616-00",
+  "Endereço": "Estrada do mar,  1245",
+  "Telefone": "(51)99865401",
+  "pedido": [
+    {
+      "id_pedido": "12A",
+      "CPF": "761.387.616-00",
+      "data": "2023-06-23",
+      "Hora": "21:00",
+      "tipo_pedido": "local",
+      "mesa": 4,
+      "Endereco": null,
+      "total_pedido": "100.99"
+    }
+  ]
+})
+
+db.cliente.insertOne({
+  "Nome": "Pedro Bauer",
+  "CPF": "831.762.376-93",
+  "Endereço": "Castelo Branco, 56",
+  "Telefone": "(51)91874401",
+  "pedido": [
+    {
+      "id_pedido": "13A",
+      "CPF": "831.762.376-93",
+      "data": "2023-06-23",
+      "Hora": "21:30",
+      "tipo_pedido": "entrega",
+      "mesa": null,
+      "Endereco": "Castelo Branco, 56",
+      "total_pedido": "130.99"
+    }
+  ]
+})
+    
+db.pedido.insertOne({
+  "id_pedido": "12A",
+  "CPF": "761.387.616-00",
+  "data": "2023-06-23",
+  "Hora": "21:00",
+  "tipo_pedido": "local",
+  "mesa": 4,
+  "Endereco": null,
+  "total_pedido": "100.99"
+})
+
+db.pedido.insertOne({
+  "id_pedido": "13A",
+  "CPF": "831.762.376-93",
+  "data": "2023-06-23",
+  "Hora": "21:30",
+  "tipo_pedido": "entrega",
+  "mesa": null,
+  "Endereco": "Castelo Branco, 56",
+  "total_pedido": "130.99"
+})
+
+db.itens_pedido.insertOne({
+  "id_item": "ITEM001",
+  "quantidade": 1,
+  "id_pedido": "12A",
+  "pizzas": [
+    {
+      "tamanho": "Grande",
+      "valor": 30.00,
+      "sabores": [
+        {
+          "descricao": "Margherita"
+        },
+        {
+          "descricao": "Calabresa"
+        }
+      ]
+    }
+  ]
+})
+
+db.itens_pedido.insertOne({
+  "id_item": "ITEM002",
+  "quantidade": 2,
+  "id_pedido": "12A",
+  "bebidas": 
+    {
+      "descricao": "Água Mineral",
+      "valor": 3.50
+    } 
+})
+
+db.itens_pedido.insertOne({
+  "id_item": "ITEM003",
+  "quantidade": 1,
+  "id_pedido": "12A",
+  "bebidas": 
+    {
+      "descricao": "Suco de laranja",
+      "valor": 8.00
+    } 
+})
+
+db.itens_pedido.insertOne({
+  "id_item": "ITEM001",
+  "quantidade": 1,
+  "id_pedido": "13A",
+  "pizzas": 
+    {
+      "tamanho": "Grande",
+      "valor": 30.00,
+      "sabores": [
+        {
+          "descricao": "Coração"
+        },
+        {
+          "descricao": "Quatro queijos"
+        }
+      ]
+    }
+})
+
+
+db.itens_pedido.insertOne({
+  "id_item": "ITEM002",
+  "quantidade": 1,
+  "id_pedido": "13A",
+  "pizzas": 
+    {
+      "tamanho": "Broto",
+      "valor": 25.00,
+      "sabores": [
+        {
+          "descricao": "Morango Moreno"
+        }
+      ]
+    }
+})
+
+db.itens_pedido.insertOne({
+  "id_item": "ITEM003",
+  "quantidade": 1,
+  "id_pedido": "13A",
+  "bebidas": [
+    {
+      "descricao": "Coca-Cola 2lts",
+      "valor": 14.00
+    }
+  ]
+})
+
+//Alterando nome
+db.cliente.updateOne(
+   {
+  "Nome": "Laura de Matos"
+},
+{ $set: {
+    "Nome": "Laura de Souza"
+  }
+}
+)
+
+//exluindo item002
+db.itens_pedido.deleteOne({
+  "id_item": "ITEM003"
+})
+db.itens_pedido.deleteOne({
+  "bebidas.descricao": "Coca-Cola 2lts"
+})
+
+//consulta simples em uma coleção
+db.pedido.find()
+
+
+
+//consulta com uma condição
+db.pedido.find({
+  "CPF": "831.762.376-93"
+})
+
+//pesquisa simples aggregate
+db.pedido.aggregate([
+  {
+      $match: {
+      "tipo_pedido": "entrega",
+      "data": "2023-06-23"
+    }
+  }
+])
+
+//pesquise de todos os pediddos e seus detalhes ,  realizando a pesquisa entre as coleções pedidos e itens_pedido pelo comapo id_pedido
+db.pedido.aggregate([
+  {
+      $lookup: { //realiza a operação de junções entre coleções no caso a coleção pedidos,com itens_pedidos
+        from: "itens_pedido",
+        localField: "id_pedido", //tabela itens_pedido
+        foreignField: "id_pedido", // tabela pedidos
+        as: "detalhes_pedido" //detalhando os itens de cada pedido
+    }
+  }
+])
+
+  
+
+  //quantidade total de pizzas vendidas por sabor
+  db.itens_pedido.aggregate([
+  {
+      $unwind: "$pizzas" //desestrutura o array e cria um documento separado para cada pizza
+  },
+  {
+      $group: { // Agrupando os sabores das pizzas
+        _id: "$pizzas.sabores.descricao",
+        totalPizzas: { $sum: "$quantidade"
+      } //somando quantas pizzas foram pedidas por sabores
+    }
+  }
+])
+
+  //Índices
+  db.pedido.createIndex({
+  "data": 1
+}) //consultas que envolvem a busca  de pedidos por data,os documentos serão organizados em ordem crescente
+  db.pedido.find({
+  "data": "2023-06-23"
+}) //pesquisa com pedidos com data = "2023-06-23"
+
+  db.pedido.createIndex({
+  "data": 1,
+  "mes": 1
+}) //pedidos.data ordenar de forma crescente os dados, pedidos.mes filtra por mes especificio
+  db.pedido.find({
+  "data": /^2023-06/
+}) //filtrar pelo mes de junho
+  //essa expressão vai buscar as strings que começam com 2023-06 que corresponde ao mes e ano que queremos realizar a consulta, pois a data da nossa modelagem é uma string
