@@ -1,14 +1,14 @@
 [{
   "_id": {
-    "$oid": "649a1b79173d0bdb398a87dd"
+    "$oid": "649a29d9173d0bdb398a87e3"
   },
   "id_item": "ITEM001",
-  "quantidade": 1,
   "id_pedido": "12A",
   "pizzas": [
     {
       "tamanho": "Grande",
       "valor": 30,
+      "quantidade": 1,
       "sabores": [
         {
           "descricao": "Margherita"
@@ -22,38 +22,38 @@
 },
 {
   "_id": {
-    "$oid": "649a1b83173d0bdb398a87de"
+    "$oid": "649a29e4173d0bdb398a87e4"
   },
   "id_item": "ITEM002",
-  "quantidade": 2,
   "id_pedido": "12A",
   "bebidas": {
     "descricao": "Água Mineral",
+    "quantidade": 1,
     "valor": 3.5
   }
 },
 {
   "_id": {
-    "$oid": "649a1b90173d0bdb398a87df"
+    "$oid": "649a29ef173d0bdb398a87e5"
   },
   "id_item": "ITEM003",
-  "quantidade": 1,
   "id_pedido": "12A",
   "bebidas": {
     "descricao": "Suco de laranja",
+    "quantidade": 1,
     "valor": 8
   }
 },
 {
   "_id": {
-    "$oid": "649a1c0a173d0bdb398a87e0"
+    "$oid": "649a29ff173d0bdb398a87e6"
   },
   "id_item": "ITEM001",
-  "quantidade": 2,
   "id_pedido": "13A",
   "pizzas": {
     "tamanho": "Grande",
     "valor": 30,
+    "quantidade": 1,
     "sabores": [
       {
         "descricao": "Coração"
@@ -66,13 +66,13 @@
 },
 {
   "_id": {
-    "$oid": "649a1c4e173d0bdb398a87e1"
+    "$oid": "649a2a0c173d0bdb398a87e7"
   },
   "id_item": "ITEM002",
-  "quantidade": 1,
   "id_pedido": "13A",
   "pizzas": {
     "tamanho": "Broto",
+    "quantidade": 1,
     "valor": 25,
     "sabores": [
       {
@@ -83,14 +83,14 @@
 },
 {
   "_id": {
-    "$oid": "649a1c6c173d0bdb398a87e2"
+    "$oid": "649a2a17173d0bdb398a87e8"
   },
   "id_item": "ITEM003",
-  "quantidade": 1,
   "id_pedido": "13A",
   "bebidas": [
     {
       "descricao": "Coca-Cola 2lts",
+      "quantidade": 1,
       "valor": 14
     }
   ]

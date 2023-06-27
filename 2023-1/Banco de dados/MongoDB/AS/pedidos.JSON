@@ -60,12 +60,12 @@ db.pedido.insertOne({
 
 db.itens_pedido.insertOne({
   "id_item": "ITEM001",
-  "quantidade": 1,
   "id_pedido": "12A",
   "pizzas": [
     {
       "tamanho": "Grande",
       "valor": 30.00,
+      "quantidade": 1,
       "sabores": [
         {
           "descricao": "Margherita"
@@ -80,34 +80,34 @@ db.itens_pedido.insertOne({
 
 db.itens_pedido.insertOne({
   "id_item": "ITEM002",
-  "quantidade": 2,
   "id_pedido": "12A",
   "bebidas": 
     {
       "descricao": "Água Mineral",
+      "quantidade": 1,
       "valor": 3.50
     } 
 })
 
 db.itens_pedido.insertOne({
   "id_item": "ITEM003",
-  "quantidade": 1,
   "id_pedido": "12A",
   "bebidas": 
     {
       "descricao": "Suco de laranja",
+      "quantidade": 1,
       "valor": 8.00
     } 
 })
 
 db.itens_pedido.insertOne({
   "id_item": "ITEM001",
-  "quantidade": 1,
   "id_pedido": "13A",
   "pizzas": 
     {
       "tamanho": "Grande",
       "valor": 30.00,
+      "quantidade": 1,
       "sabores": [
         {
           "descricao": "Coração"
@@ -122,11 +122,11 @@ db.itens_pedido.insertOne({
 
 db.itens_pedido.insertOne({
   "id_item": "ITEM002",
-  "quantidade": 1,
   "id_pedido": "13A",
   "pizzas": 
     {
       "tamanho": "Broto",
+      "quantidade": 1,
       "valor": 25.00,
       "sabores": [
         {
@@ -138,11 +138,11 @@ db.itens_pedido.insertOne({
 
 db.itens_pedido.insertOne({
   "id_item": "ITEM003",
-  "quantidade": 1,
   "id_pedido": "13A",
   "bebidas": [
     {
       "descricao": "Coca-Cola 2lts",
+      "quantidade": 1,
       "valor": 14.00
     }
   ]
@@ -187,7 +187,7 @@ db.pedido.aggregate([
   }
 ])
 
-//pesquise de todos os pediddos e seus detalhes ,  realizando a pesquisa entre as coleções pedidos e itens_pedido pelo comapo id_pedido
+//pesquise de todos os pediddos e seus detalhes ,  realizando a pesquisa entre as coleções pedidos e itens_pedido pelo campo id_pedido
 db.pedido.aggregate([
   {
       $lookup: { //realiza a operação de junções entre coleções no caso a coleção pedidos,com itens_pedidos
@@ -204,12 +204,12 @@ db.pedido.aggregate([
   //quantidade total de pizzas vendidas por sabor
   db.itens_pedido.aggregate([
   {
-      $unwind: "$pizzas" //desestrutura o array e cria um documento separado para cada pizza
+      $unwind: "$pizzas.sabores" //desestrutura o array e cria um documento separado para cada sabor de pizza
   },
   {
       $group: { // Agrupando os sabores das pizzas
         _id: "$pizzas.sabores.descricao",
-        totalPizzas: { $sum: "$quantidade"
+        totalPizzas: { $sum: "$pizzas.quantidade"
       } //somando quantas pizzas foram pedidas por sabores
     }
   }
