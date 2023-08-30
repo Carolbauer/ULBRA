@@ -1,16 +1,17 @@
 import java.util.ArrayList;
 
 abstract class Calculadora {
+
+
+
     private double resultado;
-    abstract double  calcular(Ioperador operador, ArrayList<Double> lista);
+    abstract double calcular(Operador operador, ArrayList<Double> lista);
 
     public double getResultado() {
-        return resultado;
+        return this.resultado;
     }
 
-    public final void setResultado(double resultado) {
+    public void setResultado(final double resultado) {
         this.resultado = resultado;
     }
 }
-
-

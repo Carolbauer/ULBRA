@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-public interface Ioperador {
+public interface Operador {
     double calcular(ArrayList<Double> lista);
-
-
 }
