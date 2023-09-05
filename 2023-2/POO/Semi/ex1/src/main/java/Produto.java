@@ -3,22 +3,22 @@ public class Produto {
     private final double valor;
     private final String descricao;
 
-    public Produto(final String nome, final double valor, final String descricao) {
+    public Produto(String nome, double valor, String descricao) {
         this.nome = nome;
         this.valor = valor;
         this.descricao = descricao;
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(final String nome) {
         this.nome = nome;
     }
 
     public double getValor() {
-        return valor;
+        return this.valor;
     }
 
 }
