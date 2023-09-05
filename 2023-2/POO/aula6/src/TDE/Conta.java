@@ -3,10 +3,15 @@ package TDE;
 public abstract class Conta {
 
     private Cliente cliente;
-    private int numerodaConta;
+    private final int numerodaConta;
     private double saldo;
-    public abstract void depositar();
-    public abstract void transferir();
+
+    protected Conta(final Cliente cliente, final int numerodaConta){
+        this.cliente = cliente;
+        this.numerodaConta = numerodaConta;
+    }
+    public abstract void depositar(double valor);
+    public abstract void transferir(Conta destino, double valor);
     public abstract double consultarSaldo();
 
     public Cliente getCliente() {
@@ -22,6 +27,8 @@ public abstract class Conta {
     }
 
     public void setNumerodaConta(int numerodaConta) {
-        this.numerodaConta = numerodaConta;
+        numerodaConta = this.numerodaConta;
     }
+
+
 }

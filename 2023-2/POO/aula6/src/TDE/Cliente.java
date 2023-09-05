@@ -1,22 +1,25 @@
 package TDE;
 
+import java.util.ArrayList;
+
 public class Cliente {
     private String nome;
     private int idade;
 
-    private Conta conta;
+    private final ArrayList<Conta> contas = new ArrayList<>();
 
     public Cliente(String nome, int idade) {
         this.nome = nome;
         this.idade = idade;
     }
 
-    public Conta getConta() {
-        return conta;
+    public final ArrayList<Conta> getContas() {
+        return contas;
     }
 
     public void setConta(Conta conta) {
-        this.conta = conta;
+
+        contas.add(conta);
     }
 
     public String getNome() {
