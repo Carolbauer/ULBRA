@@ -6,7 +6,7 @@ public abstract class Conta {
     private final int numerodaConta;
     private double saldo;
 
-    protected Conta(final Cliente cliente, final int numerodaConta){
+    protected Conta(Cliente cliente, int numerodaConta){
         this.cliente = cliente;
         this.numerodaConta = numerodaConta;
     }
@@ -15,15 +15,15 @@ public abstract class Conta {
     public abstract double consultarSaldo();
 
     public Cliente getCliente() {
-        return this.cliente;
+        return cliente;
     }
 
-    public void setCliente(final Cliente cliente) {
+    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 
     public int getNumerodaConta() {
-        return numerodaConta;
+        return this.numerodaConta;
     }
 
     public void setNumerodaConta(int numerodaConta) {

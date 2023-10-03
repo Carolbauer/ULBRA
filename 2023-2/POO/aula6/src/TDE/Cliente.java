@@ -8,33 +8,33 @@ public class Cliente {
 
     private final ArrayList<Conta> contas = new ArrayList<>();
 
-    public Cliente(String nome, int idade) {
+    public Cliente(final String nome, final int idade) {
         this.nome = nome;
         this.idade = idade;
     }
 
-    public final ArrayList<Conta> getContas() {
-        return contas;
+    public  ArrayList<Conta> getContas() {
+        return this.contas;
     }
 
-    public void setConta(Conta conta) {
+    public void setConta(final Conta conta) {
 
-        contas.add(conta);
+        this.contas.add(conta);
     }
 
     public String getNome() {
-        return this.nome;
+        return nome;
     }
 
-    public void setNome(final String nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
     public int getIdade() {
-        return this.idade;
+        return idade;
     }
 
-    public void setIdade(final int idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
 }
