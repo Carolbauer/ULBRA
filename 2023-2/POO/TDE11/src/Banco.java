@@ -5,22 +5,22 @@ public class Banco {
     private final List<Conta> contas;
 
     public Banco() {
-        contas = new ArrayList<>();
+        this.contas = new ArrayList<>();
     }
 
-    public void criarConta(int numeroConta, double saldo, String nomeCliente) {
-     final Conta novaConta = new Conta(numeroConta, saldo, nomeCliente);
-        contas.add(novaConta);
+    public void criarConta(final int numeroConta, final double saldo, final String nomeCliente) {
+     Conta novaConta = new Conta(numeroConta, saldo, nomeCliente);
+        this.contas.add(novaConta);
     }
 
     public void imprimirContas() {
-        for (Conta conta : contas) {
+        for (final Conta conta : this.contas) {
             System.out.println(conta);
         }
     }
 
-    public void atualizarSaldo(int numeroConta, double novoSaldo) {
-        for (Conta conta : contas) {
+    public void atualizarSaldo(final int numeroConta, final double novoSaldo) {
+        for (final Conta conta : this.contas) {
             if (conta.getNumeroConta() == numeroConta) {
                 conta.setSaldo(novoSaldo);
                 break;
@@ -28,16 +28,16 @@ public class Banco {
         }
     }
 
-    public void deletarConta(int numeroConta) {
+    public void deletarConta(final int numeroConta) {
         Conta contaParaRemover = null;
-        for (Conta conta : contas) {
+        for (final Conta conta : this.contas) {
             if (conta.getNumeroConta() == numeroConta) {
                 contaParaRemover = conta;
                 break;
             }
         }
         if (null != contaParaRemover) {
-            contas.remove(contaParaRemover);
+            this.contas.remove(contaParaRemover);
             System.out.println("Conta removida com sucesso!");
         } else {
             System.out.println("Conta não encontrada.");
