@@ -10,33 +10,33 @@ import java.util.ArrayList;
 @RestController
 @RequestMapping("/clients")
 public class ClientController {
-    private ClientService service;
+    private final ClientService service;
     @Autowired
-    public ClientController(ClientService service) {
+    public ClientController(final ClientService service) {
         this.service = service;
     }
     @GetMapping
-    public ArrayList<Client> getAll(@RequestParam(name = "age", required = false) Integer age){
-        return service.getAll(age);
+    public ArrayList<Client> getAll(@RequestParam(name = "age", required = false) final Integer age){
+        return this.service.getAll(age);
     }
 
     @GetMapping("/{id}")
-    public Client getById(@PathVariable int id){
-        return service.getById(id);
+    public Client getById(@PathVariable final int id){
+        return this.service.getById(id);
     }
     @PostMapping
-    public String addClient(@RequestBody Client client){
-        return service.addClient(client);
+    public Client addClient(@RequestBody final Client client){
+        return this.service.addClient(client);
     }
 
     @PutMapping("/{id}")
-    public String updateClient(@RequestBody Client clientData, @PathVariable final int id){
-        return this.service.updateClient(clientData, id);
+    public String updateClient(@RequestBody final Client clientData, @PathVariable int id){
+        return service.updateClient(clientData, id);
     }
 
     @DeleteMapping("/{id}")
-    public String delete(@PathVariable int id){
-        return this.service.delete(id);
+    public String delete(@PathVariable final int id){
+        return service.delete(id);
     }
 
 }

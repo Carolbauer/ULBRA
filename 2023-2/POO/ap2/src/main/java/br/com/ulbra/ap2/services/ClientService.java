@@ -7,53 +7,56 @@ import java.util.ArrayList;
 
 @Service
 public class ClientService {
-   private ArrayList<Client> listClients = new ArrayList();
+    private static int id =1;
+   private final ArrayList<Client> listClients = new ArrayList();
     public ArrayList <Client> getListClients(){
-        return listClients;
+        return this.listClients;
     }
-    public String addClient(Client client){
-        this.listClients.add(client);
-        return "Cliente adicionado com sucesso";
+    public Client addClient(Client client){
+        client = new Client(ClientService.id,client.name(), client.age(),client.profession());
+        ClientService.id++;
+        listClients.add(client);
+        return client;
     }
 
-    public Client getById( int id){
-       for (int i = 0; i < this.listClients.size(); i++){
-           if(this.listClients.get(i).id() == id){
-               return this.listClients.get(i);
+    public Client getById(final int id){
+       for (int i = 0; i < listClients.size(); i++){
+           if(listClients.get(i).id() == id){
+               return listClients.get(i);
            }
 
         }
         return null;
     }
-    public ArrayList<Client> getAll(Integer age){
-         ArrayList <Client> filtrados = new ArrayList();
+    public ArrayList<Client> getAll(final Integer age){
+         final ArrayList <Client> filtrados = new ArrayList();
         if(null != age){
-            for(int i = 0; i < listClients.size(); i++){
-                if(listClients.get(i).age() == age){
-                    filtrados.add(listClients.get(i));
+            for(int i = 0; i < this.listClients.size(); i++){
+                if(this.listClients.get(i).age() == age){
+                    filtrados.add(this.listClients.get(i));
                 }
 
             }
             return filtrados;
         }
-        return listClients;
+        return this.listClients;
     }
 
-    public String updateClient(Client client, int id)
+    public String updateClient(final Client client, final int id)
     {
-        for(int i = 0; i < listClients.size(); i++){
-            if(this.listClients.get(i).id() == id){
-                listClients.set(i, client);
+        for(int i = 0; i < this.listClients.size(); i++){
+            if(listClients.get(i).id() == id){
+                this.listClients.set(i, client);
                 break;
             }
         }
         return "Cliente atualizado com sucesso";
     }
 
-    public String delete(int id){
-        for(int i = 0; i < this.listClients.size(); i++){
-            if(this.listClients.get(i).id() == id){
-                this.listClients.remove(i);
+    public String delete(final int id){
+        for(int i = 0; i < listClients.size(); i++){
+            if(listClients.get(i).id() == id){
+                listClients.remove(i);
                 return "Cliente removido com sucesso";
             }
         }
