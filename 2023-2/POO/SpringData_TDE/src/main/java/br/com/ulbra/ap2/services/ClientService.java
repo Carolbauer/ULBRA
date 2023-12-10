@@ -1,6 +1,6 @@
 package br.com.ulbra.ap2.services;
 
-import br.com.ulbra.ap2.dtos.ClientDto;
+import br.com.ulbra.ap2.dtos.ClientResponseDto;
 import br.com.ulbra.ap2.entities.Client;
 import br.com.ulbra.ap2.exceptions.ClientNotFoundException;
 import br.com.ulbra.ap2.repositories.ClientRepository;
@@ -12,16 +12,15 @@ import java.util.Optional;
 
 @Service
 public class ClientService {
-    private ClientRepository repository;
+    private final ClientRepository repository;
 
     @Autowired
-    public String ClientService(final ClientRepository repository) {
+    public ClientService(final ClientRepository repository) {
         this.repository = repository;
 
-        return "Sucesso";
     }
 
-    public List<Client> getAll() {
+    public List<Client> getAll(Integer age) {
 
         final List<Client> clientsResult= this.repository.findAll();
         if (clientsResult.isEmpty()){
@@ -29,27 +28,25 @@ public class ClientService {
         }
         return clientsResult;
     }
-    public ClientDto addClient(final ClientDto client) {
-        final Client ClientDtoClient = new Client( client.getName(), client.getAge(), client.getProfession());
-        final Client resultadosave = repository.save(ClientDtoClient);
+
+    public ClientResponseDto addClient(final ClientResponseDto client) {
+         Client ClientDtoClient = new Client( client.getName(), client.getAge(), client.getProfession());
+         Client resultadosave = repository.save(ClientDtoClient);
+
         return client;
     }
-
     public Client addClient(final Client client) {
         return this.repository.save(client);
     }
-
-    public Client getById(int id) {
-        final Optional<Client> optionalClient = this.repository.findById((long) id);
-        return optionalClient.orElse(null);
-    }
-
     public Client updateClient(final Client clientData, final int id) {
 
         return repository.save(clientData);
 
     }
-
+    public Client getById(final int id) {
+        final Optional<Client> optionalClient = repository.findById((long) id);
+        return optionalClient.orElse(null);
+    }
     public String delete(final int id) {
         if (this.repository.existsById((long) id)) {
             this.repository.deleteById((long) id);
@@ -57,6 +54,9 @@ public class ClientService {
         } else {
             return "Cliente não encontrado";
         }
+    }
+    public void deleteAllClients() {
+        repository.deleteAll();
     }
 }
 
