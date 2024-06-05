@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.com.ulbra.tde_09.presentation.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_createProductFragment2"
+            app:destination="@id/createProductFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailsActivity"
+            app:destination="@id/productDetailsActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/createProductFragment"
+        android:name="br.com.ulbra.tde_09.presentation.fragments.CreateProductFragment"
+        android:label="fragment_create_product"
+        tools:layout="@layout/fragment_create_product" >
+        <action
+            android:id="@+id/action_createProductFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/productDetailsActivity"
+        android:name="br.com.ulbra.tde_09.ProductDetailsActivity"
+        android:label="activity_product_details"
+        tools:layout="@layout/activity_product_details" />
+</navigation>
+

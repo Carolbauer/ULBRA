@@ -5,6 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import br.com.ulbra.tde_09.data.Product
 
 
 class ProductDetailsActivity : AppCompatActivity() {
@@ -12,7 +13,7 @@ class ProductDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_details)
 
-        val productBundle = intent.getSerializableExtra("data") as? Product
+        val productBundle = intent.getSerializableExtra("br/com/ulbra/tde_09/data") as? Product
 
         val image = findViewById<ImageView>(R.id.imgProduct)
         val price = findViewById<TextView>(R.id.tvProductPrice)
