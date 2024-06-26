@@ -22,6 +22,6 @@ class CreateProductFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (requireActivity() as AppCompatActivity).configureToolbar("Home", false)
+        (requireActivity() as AppCompatActivity).configureToolbar("Adicionar", false)
     }
 }

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.ulbra.tde_09.presentation.viewmodels.MainViewModel
 import br.com.ulbra.tde_09.presentation.adapters.ProductAdapter
 import br.com.ulbra.tde_09.R
+import br.com.ulbra.tde_09.configureToolbar
 
 class HomeFragment : Fragment() {
     private lateinit var productAdapter: ProductAdapter
@@ -44,6 +46,9 @@ class HomeFragment : Fragment() {
         recycler.adapter = productAdapter
 
         recycler.layoutManager = GridLayoutManager(requireContext(), 2)
+
+        (requireActivity() as AppCompatActivity).configureToolbar("Home", false)
+
 
     }
 }
