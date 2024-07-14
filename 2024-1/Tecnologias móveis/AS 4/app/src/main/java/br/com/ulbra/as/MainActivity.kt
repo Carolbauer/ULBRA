@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         adapter = CharacterAdapter()
         binding.rcCharacters.adapter = adapter
     }
+    
 
     private fun observer() {
         charactersViewModel.fetchCharacters().observe(this) {
