@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <ul>
+                <li><a href="#" onclick="navigate('home')">Home</a> </li>
+                <li><a href="#" onclick="navigate('sobre')">Sobre</a> </li>
+                <li><a href="#" onclick="navigate('servicos')">Serviços</a> </li>
+                <li><a href="#" onclick="navigate('contato')">Contato</a> </li>
+            </ul>
+        </nav>
+        <button id="menu-toggle">Menu</button>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Bem-vindo ao meu site</h2>
+            <p>Este é um site de exemplo de layout usando html, css e javascript</p>
+        </section>
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>Este é um site de exemplo de layout usando html, css e javascript</p>
+        </section>
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <p>Este é um site de exemplo de layout usando html, css e javascript</p>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <form id="formularioContato">
+                <label for="nome">Nome</label>
+                <br>
+                <input type="text" name="nome" id="nome">
+                <br><br>
+                <label for="email">E-mail</label>
+                <br>
+                <input type="email" name="email" id="email">
+                <br><br>
+                <label for="telefone">Telefone</label>
+                <br>
+                <input type="tel" name="telefone" id="telefone">
+                <br><br>
+                <label for="mensagem">Mensagem</label>
+                <br>
+                <textarea name="mensagem" id="mensagem"></textarea>
+                <br><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>2024 Meu site</p>
+    </footer>
+
+    <script src="./JS/script.js"></script>
+</body>
+</html>
