@@ -94,6 +94,7 @@ const arrayDeRespostasPossiveis = [
     "Cachorro", "Leão"
 ];
 
+//Informa o usuário para pensar sobre as opções válidas
 console.log("Pense em uma das opções abaixo para eu tentar adivinhar:");
 arrayDeRespostasPossiveis.forEach(resposta => {
     console.log(resposta);
