@@ -1,0 +1,40 @@
+/* Header.css */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 12vh;
+    padding: 0 20px;
+    background-color: #282c34;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 48px;
+  }
+  
+  .navigation ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    font-size: 28px;
+    color: white;
+  }
+  
+  .navigation a:hover {
+    cursor: pointer;
+    color: darkblue;
+  }
+  
+  .qualquerCoisa {
+    color: red; 
+  }
+  
