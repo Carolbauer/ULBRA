@@ -1,3 +1,4 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 
@@ -18,9 +19,9 @@ function Header() {
 
             <NavLink
               className={({ isActive }) => (isActive ? "active" : "")}
-              to={"/contato"}
+              to={"/produto/cadastrar"}
             >
-              Contato
+             Cadastrar Produtos
             </NavLink>
 
             <NavLink
@@ -30,14 +31,7 @@ function Header() {
               Sobre
             </NavLink>
 
-            <NavLink
-              className={({ isActive }) => (isActive ? "active" : "")}
-              to={"/produto"}
-            >
-              Produto
-            </NavLink>
-
-            <NavLink to="pessoas">Pessoas</NavLink>
+            <NavLink to="produtos">Produtos</NavLink>
           </ul>
         </nav>
       </header>

@@ -2,14 +2,29 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
 import SobrePage from './pages/SobrePage';
-import ContatoPage from './pages/ContatoPage';
-import PessoasPage from './pages/PessoasPage';
 import MainLayout from './layout/MainLayout';
 import ProductLayout from './layout/ProductLayout';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import ProdutoCadastrar from './pages/ProdutoCadastrar';
+import ListProdutos from './pages/ListProdutos';
 
 function App() {
-  const [pessoas, setPessoas] = useState([]);
+  const [produtos, setProdutos] = useState([]);
+
+  // Carregar os produtos ao iniciar a aplicação
+  useEffect(() => {
+    const fetchProdutos = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/products'); // Certifique-se de usar "products"
+        const data = await response.json();
+        setProdutos(data);
+      } catch (error) {
+        console.error('Erro ao carregar os produtos:', error);
+      }
+    };
+
+    fetchProdutos();
+  }, []);
 
   return (
     <BrowserRouter>
@@ -17,8 +32,14 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/sobre" element={<SobrePage />} />
-          <Route path="/contato" element={<ContatoPage pessoas={pessoas} setPessoas={setPessoas} />} />
-          <Route path="/pessoas" element={<PessoasPage pessoas={pessoas} />} />
+          <Route
+            path="/produto/cadastrar"
+            element={<ProdutoCadastrar setProdutos={setProdutos} />}
+          />
+          <Route
+            path="/produtos"
+            element={<ListProdutos produtos={produtos} />}
+          />
         </Route>
 
         <Route path="/produto" element={<ProductLayout />}>
