@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const fetchProdutos = async () => {
       try {
-        const response = await fetch('http://localhost:3001/products'); // Certifique-se de usar "products"
+        const response = await fetch('http://localhost:3001/products'); 
         const data = await response.json();
         setProdutos(data);
       } catch (error) {
