@@ -9,7 +9,7 @@
     },
     {
       "id": "5",
-      "name": "Produto 5",
+      "name": "Macbook",
       "price": 59.99,
       "description": "Descrição do Produto 5",
       "photo_url": "https://picsum.photos/id/48/200/300"
@@ -23,7 +23,7 @@
     },
     {
       "id": "7",
-      "name": "Produto 7",
+      "name": "Controle 2",
       "price": 79.99,
       "description": "Descrição do Produto 7",
       "photo_url": "https://picsum.photos/id/96/200/300"
