@@ -1,0 +1,179 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Produto 1",
+      "price": 19.99,
+      "description": "Descrição do Produto 1",
+      "photo_url": "https://picsum.photos/id/30/200/300"
+    },
+    {
+      "id": "5",
+      "name": "Produto 5",
+      "price": 59.99,
+      "description": "Descrição do Produto 5",
+      "photo_url": "https://picsum.photos/id/48/200/300"
+    },
+    {
+      "id": "6",
+      "name": "Produto editado de novo",
+      "price": "89.99",
+      "description": "Descrição do Produto 6",
+      "photo_url": "https://picsum.photos/id/60/200/300"
+    },
+    {
+      "id": "7",
+      "name": "Produto 7",
+      "price": 79.99,
+      "description": "Descrição do Produto 7",
+      "photo_url": "https://picsum.photos/id/96/200/300"
+    },
+    {
+      "id": "8",
+      "name": "Produto 8",
+      "price": 89.99,
+      "description": "Descrição do Produto 8",
+      "photo_url": "https://picsum.photos/id/119/200/300"
+    },
+    {
+      "id": "9",
+      "name": "Produto 9",
+      "price": 99.99,
+      "description": "Descrição do Produto 9",
+      "photo_url": "https://picsum.photos/id/160/200/300"
+    },
+    {
+      "id": "10",
+      "name": "Produto 10",
+      "price": 109.99,
+      "description": "Descrição do Produto 10",
+      "photo_url": "https://picsum.photos/id/175/200/300"
+    },
+    {
+      "id": "11",
+      "name": "Produto 11",
+      "price": 119.99,
+      "description": "Descrição do Produto 11",
+      "photo_url": "https://picsum.photos/id/180/200/300"
+    },
+    {
+      "id": "12",
+      "name": "Produto 12",
+      "price": 129.99,
+      "description": "Descrição do Produto 12",
+      "photo_url": "https://picsum.photos/id/201/200/300"
+    },
+    {
+      "id": "13",
+      "name": "Produto 13",
+      "price": 139.99,
+      "description": "Descrição do Produto 13",
+      "photo_url": "https://picsum.photos/id/250/200/300"
+    },
+    {
+      "id": "14",
+      "name": "Produto 14",
+      "price": 149.99,
+      "description": "Descrição do Produto 14",
+      "photo_url": "https://picsum.photos/id/357/200/300"
+    },
+    {
+      "id": "15",
+      "name": "Iphone 15",
+      "price": "8999.00",
+      "description": "Descrição do Produto 15",
+      "photo_url": "https://www.infomoney.com.br/wp-content/uploads/2024/09/Apple-iPhone-16-finish-lineup-240909.jpg?w=2048&quality=70&strip=all"
+    },
+    {
+      "id": "16",
+      "name": "Produto 16",
+      "price": 169.99,
+      "description": "Descrição do Produto 16",
+      "photo_url": "https://picsum.photos/id/366/200/300"
+    },
+    {
+      "id": "17",
+      "name": "Produto 17",
+      "price": 179.99,
+      "description": "Descrição do Produto 17",
+      "photo_url": "https://picsum.photos/id/370/200/300"
+    },
+    {
+      "id": "18",
+      "name": "Produto 18",
+      "price": 189.99,
+      "description": "Descrição do Produto 18",
+      "photo_url": "https://picsum.photos/id/435/200/300"
+    },
+    {
+      "id": "19",
+      "name": "Produto 19",
+      "price": 199.99,
+      "description": "Descrição do Produto 19",
+      "photo_url": "https://picsum.photos/id/445/200/300"
+    },
+    {
+      "id": "20",
+      "name": "Produto 20",
+      "price": 209.99,
+      "description": "Descrição do Produto 20",
+      "photo_url": "https://picsum.photos/id/531/200/300"
+    },
+    {
+      "id": "21",
+      "name": "Produto 21",
+      "price": 219.99,
+      "description": "Descrição do Produto 21",
+      "photo_url": "https://picsum.photos/200"
+    },
+    {
+      "id": "22",
+      "name": "Produto 22",
+      "price": 229.99,
+      "description": "Descrição do Produto 22",
+      "photo_url": "https://picsum.photos/200"
+    },
+    {
+      "id": "23",
+      "name": "Produto 23",
+      "price": 239.99,
+      "description": "Descrição do Produto 23",
+      "photo_url": "https://picsum.photos/200"
+    },
+    {
+      "id": "25",
+      "name": "Produto 25",
+      "price": 259.99,
+      "description": "Descrição do Produto 25",
+      "photo_url": "https://picsum.photos/200"
+    },
+    {
+      "id": "c53e",
+      "name": "Um novo produto",
+      "price": 100,
+      "description": "Descrição do novo produto",
+      "photo_url": "https://picsum.photos/200"
+    },
+    {
+      "id": "efbe",
+      "name": "Produto novinho",
+      "price": 59.99,
+      "description": "Descrição do Produto novinho",
+      "photo_url": "https://picsum.photos/200"
+    },
+    {
+      "id": "afdb",
+      "name": "Suporte notebook",
+      "price": 50.99,
+      "description": "suporte para seu notebook",
+      "photo_url": "https://m.media-amazon.com/images/I/61ZqTo-kwpL._AC_SX679_.jpg"
+    },
+    {
+      "id": "3e83",
+      "name": "Iphone 14",
+      "price": 6750,
+      "description": "IPHONE 14",
+      "photo_url": "https://www.infomoney.com.br/wp-content/uploads/2024/09/Apple-iPhone-16-finish-lineup-240909.jpg?w=2048&quality=70&strip=all"
+    }
+  ]
+}
