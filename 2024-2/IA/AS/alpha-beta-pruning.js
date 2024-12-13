@@ -1,10 +1,10 @@
-const evaluateMove = (move, penambah = 0) => {
+const evaluateMove = (move, additionalPoints = 0) => {
     let sum = 0;
     if ('remove' in move) {
         if (move["removePiece"][1].toLowerCase() == "p")
-            sum += 20 + penambah
+            sum += 20 + additionalPoints;
         else
-            sum += 60 + penambah
+            sum += 60 + additionalPoints;
     }
 
     if ('promote' in move)
@@ -17,7 +17,7 @@ const evaluateMove = (move, penambah = 0) => {
 }
 
 const minmax = (position, depth, alpha, beta, isMaximizingPlayer, sum, turn, color) => {
-    jumlahNode++;
+    nodeCount++;
     let moves = getAllMoves(turn, position)
         .reduce((arr, m) => {
             spreadNextEat(m)
