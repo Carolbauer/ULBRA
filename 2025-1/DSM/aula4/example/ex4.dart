@@ -1,7 +1,22 @@
-interface class Pessoa {
-  String get nome;
-  int get idade;
-  String get cpf;
+abstract class Pessoa{
+  void falar();
+  void caminhar();
+}
 
-  Pessoa({required String nome, required int idade, required String cpf});
+class Estudante implements Pessoa{
+  @override
+  void caminhar() {
+    print('Estudante caminhando');
+  }
+
+  @override
+  void falar() {
+    print('Estudante falando');
+  }
+}
+
+void main(){
+  var estudante = Estudante();
+  estudante.falar();
+  estudante.caminhar();
 }
