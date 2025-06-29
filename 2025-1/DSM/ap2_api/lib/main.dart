@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:ap2_api/screens/screen_main.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,6 +10,11 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  FirebaseAuth auth = FirebaseAuth.instance;
+  var user = await auth.signInWithEmailAndPassword(email: "bauercaca@gmail.com", password: "123456");
+
+  debugPrint(user.toString());
 
   runApp(const MyApp());
 }
@@ -42,7 +48,19 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const ScreenMain(),
+      home: Initializer(),
     );
   }
+}
+
+class Initializer extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState()  => _Initializer();
+  }
+class _Initializer extends State<Initializer>{
+  @override
+  Widget build(BuildContext context) {
+    return Text("Oi");
+  }
+
 }
