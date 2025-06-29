@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:ap2_api/screens/screen_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
 
@@ -16,7 +23,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
-        scaffoldBackgroundColor: Color(0xFFE3F2FD),
+        scaffoldBackgroundColor: const Color(0xFFE3F2FD),
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.lightBlue,
           foregroundColor: Colors.white,
@@ -31,7 +38,7 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-          )
+          ),
         ),
         useMaterial3: true,
       ),
